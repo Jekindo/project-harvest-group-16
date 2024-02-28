@@ -1,0 +1,149 @@
+/* Section */
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.section-title {
+  margin-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.section-title.dark {
+  color: #141414;
+}
+
+.section-subtitle {
+  margin-bottom: 40px;
+}
+
+/* Button */
+
+.button {
+  font-size: 14px;
+  line-height: 1.29;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button.primary {
+  min-width: 155px;
+  padding: 16px 32px;
+
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  color: #7a3145;
+  background-color: #fbfbfb;
+  border: none;
+  border-radius: 30px;
+}
+
+.button.primary:hover,
+.button.primary:focus {
+  color: rgba(122, 49, 69, 0.7);
+}
+
+.button.secondary {
+  padding: 12px 12px;
+
+  font-weight: 500;
+  letter-spacing: -0.02em;
+
+  color: #fbfbfb;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 1px solid rgba(251, 251, 251, 0.4);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  color: #7a3145;
+  background-color: #fbfbfb;
+}
+
+/* Highlighted text */
+
+.excerpt.secondary {
+  color: rgba(251, 251, 251, 0.3);
+}
+
+.excerpt.brand {
+  color: #576f35;
+}
+
+.excerpt.accent {
+  color: #7a3145;
+}
+
+.excerpt.bold {
+  font-weight: 700;
+}
+
+/* Media */
+
+@media screen and (min-width: 768px) {
+  /* Button */
+
+  .button.primary {
+    font-size: 18px;
+    line-height: 1.11;
+  }
+
+  .button.secondary {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  /* Section */
+
+  .section-title {
+    margin-bottom: 50px;
+
+    font-size: 64px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* Button */
+
+  .button.primary {
+    color: #fbfbfb;
+    background-color: #7a3145;
+  }
+
+  .button.primary:hover,
+  .button.primary:focus {
+    color: #fbfbfb;
+    background-color: #622133;
+  }
+
+  /* Section */
+
+  .section-title {
+    margin-bottom: 25px;
+  }
+
+  .section-subtitle {
+    margin-bottom: 50px;
+  }
+}

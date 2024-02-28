@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-harvest-group-6/",
+    "build": "vite build --base=/project-harvest-group-16/",
     "preview": "vite preview"
   },
   "devDependencies": {

@@ -1,4 +1,52 @@
 <header class="header">
-  <button class="button primary" type="button">Shop now</button>
-  <button class="button secondary" type="button">Button</button>
+  <div class="header-container container">
+    <nav class="header-navigation">
+      <a class="header-logo" href="#">
+        <svg class="header-logo-img" height="16" width="16">
+          <use href="./src/img/icons/svg-sprite.svg#icon-logo1"></use>
+        </svg>
+        <svg class="header-logo-img" height="16" width="16">
+          <use href="./src/img/icons/svg-sprite.svg#icon-logo-name"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">How It Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item-link" href="#">Vegetables</a>
+        </li>
+        <li class="nav-item"><a class="nav-item-link" href="#">Reviews</a></li>
+      </ul>
+    </nav>
+    <button class="mobile-menu-btn" type="menu">
+      <svg class="mobile-menu-icon" height="32" width="32">
+        <use href="./src/img/icons/svg-sprie#icon-mob-menu"></use>
+      </svg>
+    </button>
+    <button class="header-btn" type="button">Shop now</button>
+  </div>
+
+  <!-- mobile menu -->
+  <div class="mobile-menu-bg">
+    <div class="mobile-menu-overlay">
+      <button class="close-menu-btn" type="button">
+        <svg class="menu-icon" height="32" width="32">
+          <use href="./src/img/icons/svg-sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="nav-list-mob">
+        <li class="nav-item-mob-active">
+          <a class="nav-item-link-mob" href="#">How It Works</a>
+        </li>
+        <li class="nav-item-mob">
+          <a class="nav-item-link-mob" href="#">Vegetables</a>
+        </li>
+        <li class="nav-item-mob">
+          <a class="nav-item-link-mob" href="#">Reviews</a>
+        </li>
+      </ul>
+      <button class="mob-menu-btn" type="button">Shop now</button>
+    </div>
+  </div>
 </header>

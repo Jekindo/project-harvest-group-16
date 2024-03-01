@@ -1,25 +1,80 @@
+/* VEGETABLES */
 .section {
 }
 .vegetables {
+
+  padding: 100px;
+
+
 
 }
 .container {
 }
 .section-title {
+
+font-weight: 600;
+font-size: 64px;
+line-height: 100%;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+width: 508px;
+ margin-bottom: 25px;
+
 }
 .excerpt {
 }
 .secondary {
 }
 .section-subtitle {
+
+font-weight: 500;
+font-size: 16px;
+line-height: 1.25;
+color: #fbfbfb;
+max-width: 626px;
+margin-bottom: 50px;
 }
 .vegetables-item {
+
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+
+
+
+
+
 }
 .vegetables-list {
+  border-radius: 40px;
+  padding: 32px;
+  width: 346px;
+  height: 379px;
+  background: #fbfbfb;
+margin-bottom: 28px;
+margin-right: 21px;
+
+
 }
 .vegetables-name {
+
+font-weight: 600;
+font-size: 32px;
+line-height: 100%;
+letter-spacing: -0.01em;
+color: #7a3145;
+margin-bottom: 12px;
 }
 .vegetables-price {
+
+font-weight: 600;
+font-size: 14px;
+line-height: 1.3;
+letter-spacing: -0.01em;
+text-transform: uppercase;
+color: #141414;
 }
 .vegetables-img {
 }
+/* VEGETABLES */

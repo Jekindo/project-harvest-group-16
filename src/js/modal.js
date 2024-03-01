@@ -2,6 +2,8 @@ const refs = {
   openModalBtn: document.querySelector('[data-action="open-modal"]'),
   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
   backdrop: document.querySelector('[data-backdrop]'),
+  modal: document.querySelector('[data-modal]'),
+  modalForm: document.querySelector('[data-modal-form]'),
 };
 
 refs.openModalBtn.addEventListener('click', onOpenModal);
@@ -39,3 +41,32 @@ function onEscKeyPress(event) {
  * Нужно сделать отслеживание курсора только, когда он поверх модалки.
  * Анимировать градиент за курсором + усиливать эффект анимации, при фокусе на элементах формы.
  */
+
+refs.modal.addEventListener('mousemove', evt => {
+  let x = evt.clientX;
+  let y = evt.clientY;
+
+  refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
+
+  if (x - evt.clientX >= 50) {
+    refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
+  }
+});
+
+// refs.modalForm.children.forEach(element => {
+//   element.addEventListener('focus', evt => {
+//     console.log(evt);
+//   });
+// });
+
+// const inputs = refs.modalForm.querySelectorAll('input');
+
+// inputs.forEach(input => {
+//   input.addEventListener('focus', evt => {
+//     refs.backdrop.style.backgroundSize = '120%';
+//   });
+
+//   input.addEventListener('blur', evt => {
+//     refs.backdrop.style.backgroundSize = '100%';
+//   });
+// });

@@ -18,12 +18,18 @@
     rgba(98, 33, 51, 0.4) 15%,
     rgba(46, 47, 66, 0.7) 70%
   );
+  background: radial-gradient(
+    circle at center,
+    rgba(98, 33, 51, 0.4) 15%,
+    rgba(46, 47, 66, 0.7) 70%
+  );
   background-size: 100%;
   background-position: center;
   /* animation: gradient 15s ease infinite; */
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes gradient {

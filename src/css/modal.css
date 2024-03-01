@@ -13,11 +13,11 @@
 
   /* background-color: rgba(46, 47, 66, 0.4); */
   /* background: radial-gradient(-45deg, #622133, #7a3145, #23a6d5, #576f35); */
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle at center,
     rgba(98, 33, 51, 0.4) 15%,
     rgba(46, 47, 66, 0.7) 70%
-  );
+  ); */
   background: radial-gradient(
     circle at center,
     rgba(98, 33, 51, 0.4) 15%,

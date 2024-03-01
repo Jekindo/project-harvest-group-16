@@ -42,16 +42,16 @@ function onEscKeyPress(event) {
  * Анимировать градиент за курсором + усиливать эффект анимации, при фокусе на элементах формы.
  */
 
-refs.modal.addEventListener('mousemove', evt => {
-  let x = evt.clientX;
-  let y = evt.clientY;
+// refs.modal.addEventListener('mousemove', evt => {
+//   let x = evt.clientX;
+//   let y = evt.clientY;
 
-  refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
+//   refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
 
-  if (x - evt.clientX >= 50) {
-    refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
-  }
-});
+//   if (x - evt.clientX >= 50) {
+//     refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
+//   }
+// });
 
 // refs.modalForm.children.forEach(element => {
 //   element.addEventListener('focus', evt => {

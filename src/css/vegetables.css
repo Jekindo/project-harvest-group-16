@@ -2,7 +2,8 @@
 .section {
 }
 .vegetables {
- padding: 100px;
+/*  padding: 100px; */
+
 
 
 
@@ -13,12 +14,16 @@
 .section-title {
 
 font-weight: 600;
-font-size: 64px;
-line-height: 100%;
+/* font-size: 64px; */
+font-size: 48px;
+/* line-height: 100%; */
+line-height: 1.04;
 letter-spacing: -0.01em;
 text-transform: uppercase;
-width: 508px;
- margin-bottom: 25px;
+/* width: 508px; */
+width: 335px;
+/*  margin-bottom: 25px; */
+margin-bottom: 20px;
 
 }
 .excerpt {
@@ -28,35 +33,44 @@ width: 508px;
 .section-subtitle {
 
 font-weight: 500;
-font-size: 16px;
-line-height: 1.25;
+/* font-size: 16px; */
+font-size: 14px;
+/* line-height: 1.25; */
+line-height: 1.29;
 color: #fbfbfb;
-max-width: 626px;
-margin-bottom: 50px;
+/* max-width: 626px; */
+width: 335px;
+/* margin-bottom: 50px; */
+margin-bottom: 40px;
 }
 .vegetables-item {
 
 display: flex;
-flex-wrap: wrap;
- gap: 28px 21px;
- width: 1080px;
+ flex-wrap: wrap;
+ /* gap: 28px 21px; */
+row-gap:  20px;
+ /* width: 1080px; */
+ width: 100%;
 
 }
 
 .vegetables-list {
   border-radius: 40px;
   padding: 32px;
-  width: 346px;
+ /*  width: 346px; */
+ width: 334px;
   height: 379px;
   background: #fbfbfb;
  /*  flex-basis: calc((100% - 63px) / 3); */
+
 
 
 }
 .vegetables-name {
 
 font-weight: 600;
-font-size: 32px;
+/* font-size: 32px; */
+font-size: 28px;
 line-height: 100%;
 letter-spacing: -0.01em;
 color: #7a3145;
@@ -74,3 +88,52 @@ color: #141414;
 .vegetables-img {
 }
 /* VEGETABLES */
+@media only screen and (min-width: 768px){
+
+  .section-title{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    width: 508px;
+    margin-bottom: 50px;
+  }
+  .section-subtitle{
+    font-size: 16px;
+    line-height: 1.25;
+    width: 626px;
+    margin-bottom: 50px;
+  }
+  .vegetables-item{
+    gap: 28px 20px;
+    /* width: 342px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+.vegetables-list{
+  padding: 34px 30px;
+  flex-direction: row;
+  width: 342px;
+
+}
+}
+@media only screen and (min-width: 1280px){
+  .vegetables{
+    padding: 100px;
+  }
+.vegetables-item{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 21px;
+  width: 1080px;
+
+}
+
+.vegetables-list{
+  width: 346px;
+}
+.vegetables-name{
+  font-size: 32px;
+}
+
+}

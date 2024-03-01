@@ -2,8 +2,8 @@
 .section {
 }
 .vegetables {
+ padding: 100px;
 
-  padding: 100px;
 
 
 
@@ -37,23 +37,19 @@ margin-bottom: 50px;
 .vegetables-item {
 
 display: flex;
-flex-direction: row;
 flex-wrap: wrap;
-
-
-
-
-
+ gap: 28px 21px;
+ width: 1080px;
 
 }
+
 .vegetables-list {
   border-radius: 40px;
   padding: 32px;
   width: 346px;
   height: 379px;
   background: #fbfbfb;
-margin-bottom: 28px;
-margin-right: 21px;
+ /*  flex-basis: calc((100% - 63px) / 3); */
 
 
 }

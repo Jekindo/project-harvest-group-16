@@ -1,13 +1,30 @@
 .hero {
   padding-top: 48px;
   width: 100%;
-  /* height: 100vh; */
+  height: 100vh;
   background-color: #576f35;
 
-  /* background-image: url(../img/hero/hero-desk-1x-min.jpg);
+   background-image: /* linear-gradient(
+    rgba(20, 20, 20, 0.2),
+    rgba(20, 20, 20, 0.2)
+    ), */
+    url(../img/hero/hero-phone-1x-min.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
-  background-size: 50%; */
+  background-size: 50%;
+  background-size: 100vw, contain;
+}
+
+@media screen and (min-devicepixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+       background-image: /*linear-gradient(
+    rgba(20, 20, 20, 0.2),
+    rgba(20, 20, 20, 0.2)
+    ), */
+    url(../img/hero/hero-phone-2x-min.jpg);
+    }
 }
 
 .container-hero {
@@ -22,7 +39,7 @@
 
 .hero-title {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 48px;
   line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
@@ -37,12 +54,22 @@
   color: #fbfbfb;
 }
 
-.hero-img {
-}
-
 @media only screen and (min-width: 768px) {
   .hero {
-    padding-top: 50px;
+    background-image: url(../img/hero/hero-tab-1x-min.jpg);
+    background-size: 100vw 60%;
+  }
+
+  @media screen and (min-devicepixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(../img/hero/hero-tab-2x-min.jpg);
+    }
+  }
+
+  .container {
+    margin: 0;
   }
 
   .container-hero {
@@ -52,11 +79,10 @@
 
   .hero-title {
     font-size: 76px;
-    /* width: 704px; */
   }
 
   .hero-text {
-    /* width: 603px; */
+    width: 603px;
   }
 
   .hero-img {
@@ -66,13 +92,24 @@
 
 @media only screen and (min-width: 1280px) {
   .hero {
-    display: flex;
-    flex-direction: row;
+    background-image: url(../img/hero/hero-desk-1x-min.jpg);
+    background-position: right;
+    background-size: 50% 100vh;
+    padding-top: 238px;
+    padding-left: 100px;
+  }
+
+  @media screen and (min-devicepixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .hero {
+      background-image: url(../img/hero/hero-desk-2x-min.jpg);
+    }
   }
 
   .container-hero {
-    gap: 28px;
-    /* width: 502px; */
+    gap: 128px;
+    width: 502px;
   }
 
   .hero-title {
@@ -80,6 +117,6 @@
   }
 
   .hero-text {
-    /* width: auto;  */
+    width: 472px; 
   }
 }

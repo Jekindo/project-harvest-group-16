@@ -21,6 +21,7 @@
 
 .header-logo-img {
   fill: #fbfbfb;
+  margin-right: 8px;
 }
 
 .nav-list {
@@ -71,9 +72,16 @@
   align-items: center;
   margin-left: auto;
   border-radius: 30px;
-  background: #7a3145;
+  background-color: #7a3145;
   border: none;
-}
+  transition-property: background-color, color;
+    transition-duration: 400ms;
+    transition-timing-function: linear;
+  }
+  
+  .header-btn:hover {
+    background-color: #622133;;
+  }
 
 /* mobile-menu */
 
@@ -91,7 +99,6 @@
 .mobile-menu-overlay {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: #7a3145;
@@ -113,7 +120,7 @@
   margin-left: auto;
   position: absolute;
   top: 20px;
-  left: 20px;
+  right: 20px;
 }
 
 .menu-icon {
@@ -184,6 +191,11 @@
 /* media screens */
 
 @media only screen and (min-width: 768px) {
+
+  .header-logo-img {
+    width: 18px;
+    height: 18px;
+  }
   .mobile-menu-btn {
     width: 40px;
     height: 40px;
@@ -192,6 +204,7 @@
   .mobile-menu-overlay {
     width: 351px;
     right: 0;
+    top:0;
   }
 }
 
@@ -203,4 +216,8 @@
   .header-btn {
     display: flex;
   }
+
+    .mobile-menu-btn {
+      display: none;
+    }
 }

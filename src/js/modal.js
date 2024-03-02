@@ -2,7 +2,6 @@ const refs = {
   openModalBtn: document.querySelector('[data-action="open-modal"]'),
   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
   backdrop: document.querySelector('[data-backdrop]'),
-  modal: document.querySelector('[data-modal]'),
   modalForm: document.querySelector('[data-modal-form]'),
 };
 
@@ -22,51 +21,35 @@ function onCloseModal() {
   document.body.classList.remove('is-modal-open');
 }
 
-function onBackdropClick(event) {
-  if (event.currentTarget === event.target) {
+function onBackdropClick(evt) {
+  if (evt.currentTarget === evt.target) {
     onCloseModal();
   }
 }
 
-function onEscKeyPress(event) {
+function onEscKeyPress(evt) {
   const ESC_KEY_CODE = 'Escape';
-  const isEscKey = event.code === ESC_KEY_CODE;
+  const isEscKey = evt.code === ESC_KEY_CODE;
 
   if (isEscKey) {
     onCloseModal();
   }
 }
 
-/*
- * Нужно сделать отслеживание курсора только, когда он поверх модалки.
- * Анимировать градиент за курсором + усиливать эффект анимации, при фокусе на элементах формы.
- */
+// Data placeholders
 
-// refs.modal.addEventListener('mousemove', evt => {
-//   let x = evt.clientX;
-//   let y = evt.clientY;
+refs.modalForm.addEventListener('focusin', e => {
+  if (!e.target.classList.contains('js-input')) {
+    return;
+  }
 
-//   refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
+  e.target.placeholder = e.target.dataset.placeholder;
+});
 
-//   if (x - evt.clientX >= 50) {
-//     refs.backdrop.style.backgroundSize = `${evt.clientX / 2}%`;
-//   }
-// });
+refs.modalForm.addEventListener('focusout', e => {
+  if (!e.target.classList.contains('js-input')) {
+    return;
+  }
 
-// refs.modalForm.children.forEach(element => {
-//   element.addEventListener('focus', evt => {
-//     console.log(evt);
-//   });
-// });
-
-// const inputs = refs.modalForm.querySelectorAll('input');
-
-// inputs.forEach(input => {
-//   input.addEventListener('focus', evt => {
-//     refs.backdrop.style.backgroundSize = '120%';
-//   });
-
-//   input.addEventListener('blur', evt => {
-//     refs.backdrop.style.backgroundSize = '100%';
-//   });
-// });
+  e.target.placeholder = '';
+});

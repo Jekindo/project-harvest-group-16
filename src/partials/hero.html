@@ -1,1 +1,35 @@
-<section class="hero"></section>
+<section class="hero">
+  <div class="container container-hero">
+    <h1 class="hero-title">organic vegetables to your diet today!</h1>
+    <p class="hero-text">
+      Our expertly curated vegetable baskets are made with the freshest, highest
+      quality vegetables available. Fresh Harvest Box has got you covered.
+      Fresh, high-quality vegetables in expertly curated vegetable baskets
+      delivered to you.
+    </p>
+  </div>
+
+  <picture>
+    <source
+      srcset="
+        ./img/hero/hero-tab-1x-min.jpg  768w,
+        ./img/hero/hero-tab-2x-min.jpg 1536w
+      "
+      media="(min-width: 768px)"
+      sizes="(min-width: 768px) 768px, 375px"
+    />
+    <source
+      srcset="
+        ./img/hero/hero-phone-1x-min.jpg 375w,
+        ./img/hero/hero-phone-2x-min.jpg 750w
+      "
+      media="(max-width: 767px)"
+      sizes="375px"
+    />
+    <img
+      class="hero-img"
+      src="./img/hero/hero-desk-1x-min.jpg"
+      alt="vegetables"
+    />
+  </picture>
+</section>

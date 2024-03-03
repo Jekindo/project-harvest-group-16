@@ -1,0 +1,82 @@
+/* VEGETABLES */
+
+.vegetables-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vegetables-item {
+  border-radius: 40px;
+  padding: 32px;
+
+  background-color: #fbfbfb;
+}
+
+.vegetables-name {
+  margin-bottom: 12px;
+
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+
+  color: #7a3145;
+}
+
+.vegetables-price {
+  margin-bottom: 14px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  color: #141414;
+}
+
+.vegetables-img {
+  margin: 0 auto;
+}
+
+/* VEGETABLES */
+@media only screen and (min-width: 768px) {
+  .section-title {
+    max-width: 508px;
+  }
+
+  .section-subtitle {
+    max-width: 626px;
+  }
+
+  .vegetables-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 28px 20px;
+  }
+
+  .vegetables-item {
+    padding: 34px 30px;
+    flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .vegetables-price {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .vegetables-list {
+    gap: 28px 21px;
+  }
+
+  .vegetables-item {
+    flex-basis: calc((100% - 2 * 21px) / 3);
+    padding: 32px;
+  }
+
+  .vegetables-name {
+    font-size: 32px;
+  }
+}

@@ -1,4 +1,11 @@
 .header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+
   background-color: transparent;
 }
 
@@ -38,6 +45,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    top: 32px;
+  }
+
   .mobile-menu-icon {
     width: 40px;
     height: 40px;

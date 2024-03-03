@@ -72,6 +72,7 @@
   background-color: transparent;
   border-radius: 12px;
   border: 1px solid rgba(251, 251, 251, 0.4);
+  backdrop-filter: blur(3px);
 }
 
 .button.secondary:hover,

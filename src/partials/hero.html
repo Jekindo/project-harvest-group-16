@@ -8,29 +8,28 @@
       delivered to you.
     </p>
   </div>
-  <div>
-    <picture>
-      <source
-        media="(min-width: 768px)"
-        srcset="
-          ./img/hero/hero-tab-1x-min.jpg 1x,
-          ./img/hero/hero-tab-2x-min.jpg 2x
-        "
-      />
-      <source
-        media="(max-width: 767px)"
-        srcset="
-          ./img/hero/hero-phone-1x-min.jpg 1x,
-          ./img/hero/hero-phone-2x-min.jpg 2x
-        "
-      />
-      <img
-        class="hero-img"
-        src="../img/hero/hero-desk-1x-min.jpg"
-        alt="vegetables"
-        width="650"
-        height="800"
-      />
-    </picture>
-  </div>
+
+  <picture>
+    <source
+      srcset="
+        ./img/hero/hero-tab-1x-min.jpg  768w,
+        ./img/hero/hero-tab-2x-min.jpg 1536w
+      "
+      media="(min-width: 768px)"
+      sizes="(min-width: 768px) 768px, 375px"
+    />
+    <source
+      srcset="
+        ./img/hero/hero-phone-1x-min.jpg 375w,
+        ./img/hero/hero-phone-2x-min.jpg 750w
+      "
+      media="(max-width: 767px)"
+      sizes="375px"
+    />
+    <img
+      class="hero-img"
+      src="./img/hero/hero-desk-1x-min.jpg"
+      alt="vegetables"
+    />
+  </picture>
 </section>

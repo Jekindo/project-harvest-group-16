@@ -1,6 +1,7 @@
 body {
-  font-family: 'Inter Tight', sans-serif;
+  padding-top: 20px;
 
+  font-family: 'Inter Tight', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.29;
@@ -36,6 +37,8 @@ body.is-modal-open {
 
 @media only screen and (min-width: 768px) {
   body {
+    padding-top: 32px;
+
     font-size: 16px;
     line-height: 1.25;
   }

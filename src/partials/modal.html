@@ -1,0 +1,82 @@
+<div class="backdrop" data-backdrop>
+  <div class="modal">
+    <button class="modal-close-btn" type="button" data-action="close-modal">
+      <svg class="icon" width="18" height="18">
+        <use href="./img/icons/svg-sprite.svg#icon-cross"></use>
+      </svg>
+    </button>
+
+    <form class="modal-form" name="contact-form" data-modal-form>
+      <p class="heading">
+        Fill out <span class="excerpt brand">the form</span> below and we will
+        contact you !
+      </p>
+
+      <label class="field">
+        <input
+          class="input js-input"
+          type="text"
+          name="user-name"
+          autocomplete="name"
+          pattern="^\s*([A-Za-z ]+) ([A-Za-z]+)$"
+          title="Name Surname"
+          placeholder=""
+          data-placeholder="Mark Roberto"
+          required
+        />
+        <span class="label">Full Name</span>
+        <svg class="input-icon" width="18" height="24">
+          <use href="./img/icons/svg-sprite.svg#icon-person"></use>
+        </svg>
+      </label>
+
+      <label class="field">
+        <input
+          class="input js-input"
+          type="email"
+          name="user-email"
+          autocomplete="email"
+          pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+          title="example@mail.com"
+          placeholder=""
+          data-placeholder="example@mail.com"
+          required
+        />
+        <span class="label">Email</span>
+        <svg class="input-icon" width="18" height="24">
+          <use href="./img/icons/svg-sprite.svg#icon-email"></use>
+        </svg>
+      </label>
+
+      <label class="comment-field">
+        <textarea
+          class="comment js-input"
+          name="user-comment"
+          placeholder=""
+          data-placeholder="Here is my comment"
+        ></textarea>
+        <span class="comment-label">Comment</span>
+      </label>
+
+      <label class="privacy-field">
+        <input
+          class="checkbox visually-hidden"
+          type="checkbox"
+          name="user-privacy"
+          required
+        />
+        <span class="checkbox-icon">
+          <svg class="check-icon" width="10" height="8">
+            <use href="./img/icons/svg-sprite.svg#icon-check"></use>
+          </svg>
+        </span>
+        <span class="privacy-label">
+          I accept the terms and conditions of the
+          <a class="privacy-link" href="">Privacy Policy</a>
+        </span>
+      </label>
+
+      <button class="button primary" type="submit">Send</button>
+    </form>
+  </div>
+</div>

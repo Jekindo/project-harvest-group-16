@@ -17,14 +17,44 @@
     />
     
     <script type="module" crossorigin src="/project-harvest-group-16/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-harvest-group-16/assets/index-1ec68a95.css">
+    <link rel="stylesheet" href="/project-harvest-group-16/assets/index-e4cc106b.css">
   </head>
   <body>
     <header class="header">
-  <button class="button primary" type="button" data-action="open-modal">
-    Shop now
-  </button>
-  <button class="button secondary" type="button">Button</button>
+  <div class="header-container container">
+    <nav class="header-navigation">
+      <a class="logo" href="./index.html">
+        <svg class="logo-img" height="16" width="16">
+          <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-logo"></use>
+        </svg>
+        <svg class="logo-img-name" height="16" width="168">
+          <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-logo-text"></use>
+        </svg>
+      </a>
+
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="button secondary" href="#">How It Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="button secondary" href="#">Vegetables</a>
+        </li>
+        <li class="nav-item">
+          <a class="button secondary" href="#">Reviews</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="mobile-menu-btn" type="button" data-action="open-menu">
+      <svg class="mobile-menu-icon" height="32" width="32">
+        <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-menu"></use>
+      </svg>
+    </button>
+
+    <button class="button primary" type="button" data-action="open-modal">
+      Shop now
+    </button>
+  </div>
 </header>
 
 
@@ -79,11 +109,36 @@
     <footer class="footer"></footer>
 
 
+    <!-- mobile menu -->
+<div class="mobile-menu-bg" data-menu>
+  <div class="mobile-menu-overlay">
+    <button class="close-menu-btn" type="button" data-action="close-menu">
+      <svg class="menu-icon" height="32" width="32">
+        <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-cross"></use>
+      </svg>
+    </button>
+
+    <ul class="nav-list-mob">
+      <li class="nav-item-mob">
+        <a class="button secondary is-active" href="#">How It Works</a>
+      </li>
+      <li class="nav-item-mob">
+        <a class="button secondary" href="#">Vegetables</a>
+      </li>
+      <li class="nav-item-mob">
+        <a class="button secondary" href="#">Reviews</a>
+      </li>
+    </ul>
+
+    <button class="mob-menu-btn button primary" type="button">Shop now</button>
+  </div>
+</div>
+
     <div class="backdrop" data-backdrop>
   <div class="modal">
     <button class="modal-close-btn" type="button" data-action="close-modal">
       <svg class="icon" width="18" height="18">
-        <use href="/project-harvest-group-16/assets/svg-sprite-046aaa5c.svg#icon-cross"></use>
+        <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-cross"></use>
       </svg>
     </button>
 
@@ -107,7 +162,7 @@
         />
         <span class="label">Full Name</span>
         <svg class="input-icon" width="18" height="24">
-          <use href="/project-harvest-group-16/assets/svg-sprite-046aaa5c.svg#icon-person"></use>
+          <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-person"></use>
         </svg>
       </label>
 
@@ -125,7 +180,7 @@
         />
         <span class="label">Email</span>
         <svg class="input-icon" width="18" height="24">
-          <use href="/project-harvest-group-16/assets/svg-sprite-046aaa5c.svg#icon-email"></use>
+          <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-email"></use>
         </svg>
       </label>
 
@@ -148,7 +203,7 @@
         />
         <span class="checkbox-icon">
           <svg class="check-icon" width="10" height="8">
-            <use href="/project-harvest-group-16/assets/svg-sprite-046aaa5c.svg#icon-check"></use>
+            <use href="/project-harvest-group-16/assets/svg-sprite-90c58dd2.svg#icon-check"></use>
           </svg>
         </span>
         <span class="privacy-label">

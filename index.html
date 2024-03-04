@@ -22,7 +22,7 @@
     
     <script type="module" crossorigin src="/project-harvest-group-16/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/project-harvest-group-16/assets/vendor-5304be77.js">
-    <link rel="stylesheet" href="/project-harvest-group-16/assets/index-0dc16754.css">
+    <link rel="stylesheet" href="/project-harvest-group-16/assets/index-f34e084b.css">
   </head>
   <body>
     <header class="header">
@@ -371,16 +371,112 @@
 </section>
 
       <section class="section order">
-  <div class="container">
-    <h2 class="section-title">
-      Fresh <span class="excerpt secondary">Harvest</span> Box has got you
-      covered
-    </h2>
-    <p class="section-subtitle">
-      Our boxes are packed with delicious, nutritious vegetables, perfect for
-      anyone looking to eat healthier or support local farmers. Order your box
-      today and start enjoying the best that nature has to offer!
-    </p>
+  <div class="container order-container">
+    <div class="order-title-container">
+      <h2 class="section-title order-title">
+        Fresh <span class="excerpt secondary">Harvest</span> Box has got you
+        covered
+      </h2>
+      <p class="section-subtitle order-subtitle">
+        Our boxes are packed with delicious, nutritious vegetables, perfect for
+        anyone looking to eat healthier or support local farmers. Order your box
+        today and start enjoying the best that nature has to offer!
+      </p>
+    </div>
+    <div class="order-holder">
+      <div class="order-modal-container">
+        <h3 class="order-modal-title">
+          Ordering <span class="excerpt accent"> from us</span> is quick and
+          easy! Fill out <span class="excerpt brand"> the form</span> below and
+          we will contact you !
+        </h3>
+
+        <form class="order-form" name="feedback-form">
+          <div class="field">
+            <input
+              class="order-form-user"
+              type="text"
+              name="user-name"
+              autocomplete="name"
+              id="full-name"
+              pattern="^\s*([A-Za-z ]+) ([A-Za-z]+)$"
+              title="Name Surname"
+              placeholder=""
+              data-placeholder="Mark Roberto"
+              required
+            />
+            <label class="order-form-label" for="full-name">Full Name</label>
+          </div>
+
+          <div class="field">
+            <input
+              class="order-form-user"
+              type="email"
+              name="user-email"
+              autocomplete="email"
+              id="user-email"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+              title="example@mail.com"
+              placeholder=""
+              data-placeholder="example@mail.com"
+              required
+            />
+            <label class="order-form-label" for="user-email">Email</label>
+          </div>
+
+          <div class="comment-field">
+            <textarea
+              class="order-comment"
+              name="user-comment"
+              id="user-comment"
+              placeholder=""
+              data-placeholder="Here is my comment"
+            ></textarea>
+            <label class="order-form-label" for="user-comment">Comment</label>
+          </div>
+
+          <button class="order-form-btn">Send</button>
+        </form>
+      </div>
+      <div class="order-follow-container">
+        <picture>
+          <source
+            media="(min-width: 1280px )"
+            srcset="/project-harvest-group-16/assets/order-ad5baa59.jpg 1x, /project-harvest-group-16/assets/order@2x-d34ea7ef.jpg 2x"
+          />
+          <source
+            media="(min-width: 768px )"
+            srcset="/project-harvest-group-16/assets/order-tab-b4f79ee9.jpg 1x, /project-harvest-group-16/assets/order-tab@2x-538cbfe3.jpg 2x"
+          />
+          <source
+            media="(maxn-width: 767px )"
+            srcset="/project-harvest-group-16/assets/order-mob-1bf26d5d.jpg 1x, /project-harvest-group-16/assets/order-mob@2x-de381e9b.jpg 2x"
+          />
+          <img
+            src="/project-harvest-group-16/assets/order-mob-1bf26d5d.jpg"
+            alt="Fresh"
+            class="order-follow-picture"
+            width="528px"
+          />
+        </picture>
+        <p class="order-follow-text">Follow us on our social networks:</p>
+        <div class="order-follow-box">
+          <ul class="order-follow-list">
+            <li class="order-list-item">
+              <a href="" class="order-item-link">instagram</a>
+            </li>
+            <p class="order-lixt-slash">/</p>
+            <li>
+              <a href="" class="order-item-link">facebook</a>
+            </li>
+            <p class="order-lixt-slash">/</p>
+            <li>
+              <a href="" class="order-item-link">youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

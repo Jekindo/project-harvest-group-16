@@ -22,7 +22,7 @@
     
     <script type="module" crossorigin src="/project-harvest-group-16/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/project-harvest-group-16/assets/vendor-5304be77.js">
-    <link rel="stylesheet" href="/project-harvest-group-16/assets/index-48d48e17.css">
+    <link rel="stylesheet" href="/project-harvest-group-16/assets/index-c104277a.css">
   </head>
   <body>
     <header class="header">
@@ -39,13 +39,13 @@
 
       <ul class="nav-list">
         <li class="nav-item">
-          <a class="button secondary" href="#">How It Works</a>
+          <a class="button secondary" href="#about">How It Works</a>
         </li>
         <li class="nav-item">
-          <a class="button secondary" href="#">Vegetables</a>
+          <a class="button secondary" href="#vegetables">Vegetables</a>
         </li>
         <li class="nav-item">
-          <a class="button secondary" href="#">Reviews</a>
+          <a class="button secondary" href="#reviews">Reviews</a>
         </li>
       </ul>
     </nav>
@@ -94,7 +94,7 @@
   </picture>
 </section>
 
-      <section class="section about">
+      <section class="section about" id="about">
   <div class="container container-main">
     <div class="container-first">
       <h2 class="about-title visually-hidden">How it works</h2>
@@ -166,7 +166,7 @@
   </div>
 </section>
 
-      <section class="section vegetables">
+      <section class="section vegetables" id="vegetables">
   <div class="container">
     <h2 class="section-title">
       organic <span class="excerpt secondary">vegetables</span>
@@ -247,7 +247,7 @@
   </div>
 </section>
 
-      <section class="section reviews">
+      <section class="section reviews" id="reviews">
   <div class="container">
     <h2 class="section-title dark">
       reviews from our <span class="excerpt brand">customers</span>
@@ -503,13 +503,13 @@
       <div class="footer-column">
         <ul class="footer-links">
           <li class="footer-links-item">
-            <a class="footer-links-link" href="">how it works</a>
+            <a class="footer-links-link" href="#about">how it works</a>
           </li>
           <li class="footer-links-item">
-            <a class="footer-links-link" href="">vegetables</a>
+            <a class="footer-links-link" href="#vegetables">vegetables</a>
           </li>
           <li class="footer-links-item">
-            <a class="footer-links-link" href="">reviews</a>
+            <a class="footer-links-link" href="#reviews">reviews</a>
           </li>
         </ul>
 
@@ -556,17 +556,29 @@
 
     <ul class="nav-list-mob">
       <li class="nav-item-mob">
-        <a class="button secondary is-active" href="#">How It Works</a>
+        <a class="button secondary is-active js-mobile-menu-link" href="#about"
+          >How It Works</a
+        >
       </li>
       <li class="nav-item-mob">
-        <a class="button secondary" href="#">Vegetables</a>
+        <a class="button secondary js-mobile-menu-link" href="#vegetables"
+          >Vegetables</a
+        >
       </li>
       <li class="nav-item-mob">
-        <a class="button secondary" href="#">Reviews</a>
+        <a class="button secondary js-mobile-menu-link" href="#reviews"
+          >Reviews</a
+        >
       </li>
     </ul>
 
-    <button class="mob-menu-btn button primary" type="button">Shop now</button>
+    <button
+      class="mob-menu-btn button primary"
+      type="button"
+      data-action="open-modal"
+    >
+      Shop now
+    </button>
   </div>
 </div>
 

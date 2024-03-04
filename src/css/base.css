@@ -10,10 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-body.is-modal-open {
-  overflow: hidden;
-}
-
 /* Utils */
 
 .visually-hidden {

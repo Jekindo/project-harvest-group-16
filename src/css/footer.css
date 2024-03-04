@@ -1,44 +1,109 @@
-.footer-svg-logo {
-fill: #fbfbfb;;
-}
-
-.container {
-    padding-top: 40px 20px;
-}
-
-.company-logo {
+.sec-logo-svg {
     margin-bottom: 14px;
 }
 
-.footer-text {
-    color: #fbfbfb;;
+    .footer-text {
+    width: 296px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.29em;
+    margin-bottom: 40px;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+        margin-bottom: 40px;
+    }
+    
+    .footer-links-item {
+        color: #fbfbfb;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.0em;
+    letter-spacing: -0.01em;
+    }
+    
+    .adress-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+    }
+    
+    .adress-list-item {
+        width: 179px;
+        height: auto;
+    }
+
+    .bottom-links{
+        display: flex;
+        column-gap: 8px;
+        color: rgba(251, 251, 251, 0.5);
+    }
+
+    .bottom-links-item {
 font-weight: 500;
-font-size: 14px;
-line-height: 1.29em;
-margin-bottom: 40px;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: -0.01em;
+    }
+
+.adress-div {
+    margin-bottom: 80px;
 }
 
-.footer-links {
-    color: #fbfbfb;;
+.bottom-company{
+font-weight: 500;
+font-size: 12px;
+line-height: 133%;
+letter-spacing: -0.01em;
+margin-left: 44px;
+}
+
+@media screen and (min-width:768px) {
+    .footer-logo {
+        margin-bottom: 25px;
+    }
+
+.footer-container {
     display: flex;
-    row-gap: 14px;
+    gap: 224px;
+}
+
+.bottom-company{
+    margin-left: 385px;
+}
+
+.footer-text {
+font-weight: 500;
+font-size: 16px;
+line-height: 1.25;
 }
 
 .footer-links-item {
-    color: #fbfbfb;;
 font-weight: 600;
-font-size: 28px;
-line-height: 1.0em;
+font-size: 32px;
+line-height: 1.0;
 letter-spacing: -0.01em;
 }
 
-.adress-list {
-color: #fbfbfb;;
-    display: flex;
-    row-gap: 14px;
+.adress-list-item {
+    font-weight: 600;
+font-size: 18px;
+line-height: 1.11;
+letter-spacing: -0.01em;
+width: 215px;
+}
 }
 
-.adress-list-item {
-    width: 179px;
-    height: auto;
+@media screen and (min-width:1280px) {
+    .footer-container {
+        display: flex;
+        gap: 302px;
+    }
+
+    .bottom-company{
+        margin-left: 780px;
+    }
 }

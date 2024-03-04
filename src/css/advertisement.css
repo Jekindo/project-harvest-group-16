@@ -13,10 +13,26 @@
 }
 
 .ad-span {
-  display: inline-block;
-  padding: 3px 10px;
+  position: relative;
+  z-index: 1;
+
+  display: block;
 
   color: #fbfbfb;
+}
+
+.ad-span::before {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  width: calc(100% + 20px);
+  height: calc(100% + 6px);
+
   background-color: #576f35;
   border-radius: 12px;
 }
@@ -27,8 +43,9 @@
     line-height: 1.09;
   }
 
-  .ad-span {
-    padding: 8px 16px;
+  .ad-span::before {
+    width: calc(100% + 32px);
+    height: calc(100% + 16px);
   }
 }
 
@@ -40,6 +57,13 @@
   }
 
   .ad-span {
-    padding: 5px 13px;
+    display: inline-block;
+  }
+
+  .ad-span::before {
+    left: -13px;
+    transform: translate(0, -50%);
+    width: calc(100% + 19px);
+    height: calc(100% + 10px);
   }
 }

@@ -1,11 +1,15 @@
 const refs = {
-  openModalBtn: document.querySelector('[data-action="open-modal"]'),
+  openModalBtns: document.querySelectorAll('[data-action="open-modal"]'),
   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
   backdrop: document.querySelector('[data-backdrop]'),
   modalForm: document.querySelector('[data-modal-form]'),
 };
 
-refs.openModalBtn.addEventListener('click', onOpenModal);
+console.log(refs.openModalBtns);
+
+refs.openModalBtns.forEach(btn => {
+  btn.addEventListener('click', onOpenModal);
+});
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdrop.addEventListener('click', onBackdropClick);
 

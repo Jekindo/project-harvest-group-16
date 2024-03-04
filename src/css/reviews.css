@@ -40,6 +40,10 @@
 }
 
 /* Swiper */
+.swiper {
+  padding: 0 1px;
+}
+
 .swiper-slide {
   padding-bottom: 30px;
 }

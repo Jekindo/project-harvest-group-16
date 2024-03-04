@@ -156,7 +156,7 @@ ol {
 @media only screen and (min-width: 1280px) {
   .container-main {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .about-thumb {
@@ -166,7 +166,7 @@ ol {
 
   .container-second::before {
     top: 0;
-    left: -100px;
+    left: -94px;
     transform: translate(0, 0);
   }
 }

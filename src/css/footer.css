@@ -1,13 +1,17 @@
-.sec-logo-svg {
+.footer {
+  padding: 40px 0;
+}
+
+.footer-top {
+  margin-bottom: 80px;
+}
+
+.footer .logo {
   margin-bottom: 14px;
 }
 
 .footer-text {
-  width: 296px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.29em;
-  margin-bottom: 40px;
+  max-width: 296px;
 }
 
 .footer-links {
@@ -17,12 +21,25 @@
   margin-bottom: 40px;
 }
 
-.footer-links-item {
+.footer-links-link {
   color: #fbfbfb;
   font-weight: 600;
   font-size: 28px;
-  line-height: 1em;
+  line-height: 1;
   letter-spacing: -0.01em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-links-link:hover,
+.footer-links-link:focus {
+  color: #576f35;
+}
+
+/* Address */
+
+.address-field {
+  font-style: normal;
 }
 
 .adress-list {
@@ -31,79 +48,118 @@
   row-gap: 14px;
 }
 
-.adress-list-item {
-  width: 179px;
-  height: auto;
+.adress-list-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.adress-list-link:hover,
+.adress-list-link:focus {
+  color: rgba(251, 251, 251, 0.5);
+}
+
+/* Footer bottom */
 
 .bottom-links {
   display: flex;
   column-gap: 8px;
+
   color: rgba(251, 251, 251, 0.5);
 }
 
-.bottom-links-item {
+.bottom-links-item:last-child {
+  margin-left: auto;
+}
+
+.bottom-links-link {
   font-weight: 500;
   font-size: 12px;
-  line-height: 133%;
+  line-height: 1.33;
+  letter-spacing: -0.01em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bottom-links-link:hover,
+.bottom-links-link:focus {
+  color: #fbfbfb;
+}
+
+.bottom-copyright {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
   letter-spacing: -0.01em;
 }
 
-.adress-div {
-  margin-bottom: 80px;
-}
-
-.bottom-company {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 133%;
-  letter-spacing: -0.01em;
-  margin-left: 44px;
+/*
+* MEDIA *
+ */
+@media only screen and (max-width: 767px) {
+  .footer-promo {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .footer-logo {
+  .footer {
+    padding: 32px 0;
+  }
+
+  .footer .logo {
     margin-bottom: 25px;
   }
 
-  .footer-container {
+  .footer-top {
+    margin-bottom: 100px;
+  }
+
+  .footer-top {
     display: flex;
-    gap: 224px;
+    justify-content: space-between;
+    align-items: baseline;
   }
 
-  .bottom-company {
-    margin-left: 385px;
+  .footer-links {
+    margin-bottom: 64px;
+    row-gap: 25px;
   }
 
-  .footer-text {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.25;
-  }
-
-  .footer-links-item {
-    font-weight: 600;
+  .footer-links-link {
     font-size: 32px;
-    line-height: 1;
-    letter-spacing: -0.01em;
   }
 
-  .adress-list-item {
-    font-weight: 600;
+  .adress-list {
+    row-gap: 25px;
+  }
+
+  .adress-list-link {
     font-size: 18px;
-    line-height: 1.11;
-    letter-spacing: -0.01em;
-    width: 215px;
+  }
+
+  .bottom-links-link {
+    font-size: 18px;
+  }
+
+  .bottom-copyright {
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .footer-container {
-    display: flex;
-    gap: 302px;
+  .footer {
+    padding: 50px 0;
   }
 
-  .bottom-company {
-    margin-left: 780px;
+  .footer-top {
+    margin-bottom: 125px;
+  }
+
+  .footer-column {
+    display: flex;
+    column-gap: 121px;
+  }
+
+  .footer-links {
+    margin-bottom: 0;
   }
 }

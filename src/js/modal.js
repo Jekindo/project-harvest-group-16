@@ -14,6 +14,7 @@ function onOpenModal() {
 
   window.addEventListener('keydown', onEscKeyPress);
   refs.backdrop.classList.remove('is-hidden');
+  // document.body.classList.add('modal-is-open');
 }
 
 function onCloseModal() {
@@ -21,7 +22,21 @@ function onCloseModal() {
 
   window.removeEventListener('keydown', onEscKeyPress);
   refs.backdrop.classList.add('is-hidden');
+  // document.body.classList.remove('modal-is-open');
+
+  const body = document.body;
+  const scrollY = body.style.top;
+  body.style.position = '';
+  body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
+
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty(
+    '--scroll-y',
+    `${window.scrollY}px`
+  );
+});
 
 function onBackdropClick(evt) {
   if (evt.currentTarget === evt.target) {

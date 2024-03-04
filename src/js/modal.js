@@ -10,15 +10,17 @@ refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdrop.addEventListener('click', onBackdropClick);
 
 function onOpenModal() {
+  disableScroll();
+
   window.addEventListener('keydown', onEscKeyPress);
   refs.backdrop.classList.remove('is-hidden');
-  document.body.classList.add('is-modal-open');
 }
 
 function onCloseModal() {
+  enableScroll();
+
   window.removeEventListener('keydown', onEscKeyPress);
   refs.backdrop.classList.add('is-hidden');
-  document.body.classList.remove('is-modal-open');
 }
 
 function onBackdropClick(evt) {
@@ -34,6 +36,21 @@ function onEscKeyPress(evt) {
   if (isEscKey) {
     onCloseModal();
   }
+}
+
+function disableScroll() {
+  // Get the current page scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  // if any scroll is attempted,
+  // set this to the previous value
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
 }
 
 // Data placeholders

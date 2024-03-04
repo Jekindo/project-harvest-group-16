@@ -1,0 +1,45 @@
+.advertisement {
+  background-color: #fbfbfb;
+}
+
+.ad-text {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+
+  color: #141414;
+}
+
+.ad-span {
+  display: inline-block;
+  padding: 3px 10px;
+
+  color: #fbfbfb;
+  background-color: #576f35;
+  border-radius: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ad-text {
+    font-size: 64px;
+    line-height: 1.09;
+  }
+
+  .ad-span {
+    padding: 8px 16px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .ad-text {
+    max-width: 1060px;
+    font-size: 76px;
+    line-height: 1.05;
+  }
+
+  .ad-span {
+    padding: 5px 13px;
+  }
+}

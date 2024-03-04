@@ -1,1 +1,70 @@
-<section class="section about"></section>
+<section class="section about">
+  <div class="container container-main">
+    <div class="container-first">
+      <h2 class="about-title visually-hidden">How it works</h2>
+      <div class="about-thumb">
+        <picture>
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ../img/1x_about_title_img_mob.jpg 1x,
+              ../img/2x_about_title_img_mob.jpg 2x
+            "
+          />
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../img/1x_about_title_img_lept.jpg 1x,
+              ../img/2x_about_title_img_lept.jpg 2x
+            "
+          />
+          <source
+            media="(min-width: 1280px)"
+            srcset="
+              ../img/1x_about_title_img_comp.jpg 1x,
+              ../img/2x_about_title_img_comp.jpg 2x
+            "
+          />
+          <img
+            class="about-title-img"
+            src="../img/1x_about_title_img_comp.jpg"
+            alt="girl and fruit"
+          />
+        </picture>
+      </div>
+    </div>
+    <div class="container-second">
+      <p class="about-second-part-title">
+        To order your <span class="excerpt secondary">vegetable</span> basket,
+        simply follow these <span class="excerpt secondary">easy steps</span>
+      </p>
+      <p class="about-second-part-text">
+        Our baskets are assembled with care and delivered straight to your
+        doorstep, so you can enjoy the taste of fresh fruit without ever leaving
+        your home.
+      </p>
+      <ol class="about-easy-steps">
+        <li class="about-easy-steps-item">
+          <p class="item-text">
+            Just choose <span class="excerpt bold">the vegetable</span> you want
+            to order by clicking on the checkboxes
+            <span class="excerpt bold">next to it.</span>
+          </p>
+        </li>
+        <li class="about-easy-steps-item">
+          <p class="item-text">
+            Click on <span class="excerpt bold">the basket</span> and fill out
+            the form.
+          </p>
+        </li>
+        <li class="about-easy-steps-item">
+          <p class="item-text">
+            Sit back and relax! Your
+            <span class="excerpt bold">fresh vegetables</span> basket will be
+            delivered.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>

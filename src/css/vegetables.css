@@ -7,10 +7,52 @@
 }
 
 .vegetables-item {
-  border-radius: 40px;
+  cursor: pointer;
+
+  perspective: 1500px;
+}
+
+.card {
+  position: relative;
+
+  width: 100%;
+  min-height: 379px;
+  height: 100%;
+
+  transform: rotateY(0);
+
+  transition: transform 500ms linear;
+  transform-style: preserve-3d;
+  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
   padding: 32px;
 
+  backface-visibility: hidden;
+  border-radius: 40px;
+}
+
+.card-face.front {
   background-color: #fbfbfb;
+}
+
+.card-face.back {
+  background-color: #fbfbfb;
+  transform: rotateY(180deg);
+  overflow-y: auto;
+}
+
+.vegetables-list .text {
+  color: #141414;
 }
 
 .vegetables-name {
@@ -57,8 +99,11 @@
   }
 
   .vegetables-item {
-    padding: 34px 30px;
     flex-basis: calc((100% - 20px) / 2);
+  }
+
+  .card-face {
+    padding: 34px 30px;
   }
 
   .vegetables-price {
@@ -73,6 +118,9 @@
 
   .vegetables-item {
     flex-basis: calc((100% - 2 * 21px) / 3);
+  }
+
+  .card-face {
     padding: 32px;
   }
 

@@ -142,11 +142,11 @@
 }
 
 .modal-form .field:focus-within .label {
-  transform: translateY(calc(-50% - 31px));
+  transform: translateY(calc(-50% - 32px));
 }
 
 .modal-form .input:not(:placeholder-shown) + .label {
-  transform: translateY(calc(-50% - 31px)) translateX(-25px) scale(0.95);
+  transform: translateY(calc(-50% - 32px)) translateX(-25px) scale(0.95);
 }
 
 .modal-form .input-icon {
@@ -161,6 +161,14 @@
 .modal-form .field:hover .input-icon,
 .modal-form .field:focus-within .input-icon {
   fill: #7a3145;
+}
+
+.modal-form .input:not(:placeholder-shown):invalid ~ .input-icon {
+  fill: rgba(255, 0, 0, 0.5);
+}
+
+.modal-form .input:not(:placeholder-shown):valid ~ .input-icon {
+  fill: rgba(0, 128, 0, 0.5);
 }
 
 .comment-field {
@@ -209,11 +217,11 @@
 }
 
 .modal-form .comment-field:focus-within .comment-label {
-  transform: translateY(-31px);
+  transform: translateY(-32px);
 }
 
 .modal-form .comment:not(:placeholder-shown) + .comment-label {
-  transform: translateY(-31px) translateX(-5px) scale(0.95);
+  transform: translateY(-32px) translateX(-5px) scale(0.95);
 }
 
 .modal-form .privacy-field {

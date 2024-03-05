@@ -1,25 +1,46 @@
 const refs = {
-  openModalBtn: document.querySelector('[data-action="open-modal"]'),
+  openModalBtns: document.querySelectorAll('[data-action="open-modal"]'),
   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
   backdrop: document.querySelector('[data-backdrop]'),
   modalForm: document.querySelector('[data-modal-form]'),
 };
 
-refs.openModalBtn.addEventListener('click', onOpenModal);
+console.log(refs.openModalBtns);
+
+refs.openModalBtns.forEach(btn => {
+  btn.addEventListener('click', onOpenModal);
+});
 refs.closeModalBtn.addEventListener('click', onCloseModal);
 refs.backdrop.addEventListener('click', onBackdropClick);
 
 function onOpenModal() {
+  disableScroll();
+
   window.addEventListener('keydown', onEscKeyPress);
   refs.backdrop.classList.remove('is-hidden');
-  document.body.classList.add('is-modal-open');
+  // document.body.classList.add('modal-is-open');
 }
 
 function onCloseModal() {
+  enableScroll();
+
   window.removeEventListener('keydown', onEscKeyPress);
   refs.backdrop.classList.add('is-hidden');
-  document.body.classList.remove('is-modal-open');
+  // document.body.classList.remove('modal-is-open');
+
+  const body = document.body;
+  const scrollY = body.style.top;
+  body.style.position = '';
+  body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
+
+window.addEventListener('scroll', () => {
+  document.documentElement.style.setProperty(
+    '--scroll-y',
+    `${window.scrollY}px`
+  );
+});
 
 function onBackdropClick(evt) {
   if (evt.currentTarget === evt.target) {
@@ -34,6 +55,21 @@ function onEscKeyPress(evt) {
   if (isEscKey) {
     onCloseModal();
   }
+}
+
+function disableScroll() {
+  // Get the current page scroll position
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+  // if any scroll is attempted,
+  // set this to the previous value
+  window.onscroll = function () {
+    window.scrollTo(scrollLeft, scrollTop);
+  };
+}
+
+function enableScroll() {
+  window.onscroll = function () {};
 }
 
 // Data placeholders

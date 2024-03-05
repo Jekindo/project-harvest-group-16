@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter Tight', sans-serif;
   font-size: 14px;
@@ -6,9 +10,11 @@ body {
 
   color: #fbfbfb;
   background-color: #7a3145;
+
+  overflow-x: hidden;
 }
 
-body.is-modal-open {
+body.modal-is-open {
   overflow: hidden;
 }
 

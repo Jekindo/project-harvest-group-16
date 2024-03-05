@@ -4,3 +4,4 @@ import './js/swiper';
 import './js/back-top-top';
 import './js/vegetables';
 import './js/header';
+import './js/about';

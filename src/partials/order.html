@@ -14,22 +14,54 @@
     <div class="order-holder">
       <div class="order-modal-container">
         <h3 class="order-modal-title">
-            Ordering <span class="excerpt accent"> from us</span> is quick and easy! Fill out <span class="excerpt brand"> the form</span> below and we will contact you !
+          Ordering <span class="excerpt accent"> from us</span> is quick and
+          easy! Fill out <span class="excerpt brand"> the form</span> below and
+          we will contact you !
         </h3>
-    
-        <form class="order-form" name="feedback-form" autocomplete="off">
-          <label class="order-form-label" for="full-name">
-          </label>
-          <input type="text" class="order-form-user" name="userfullname" id="full-name" placeholder="Full Name">
-      
-          <label for="user-email" class="order-form-label">
-          </label>
-          <input type="email" name="user-email" id="user-email" placeholder="Email" class="order-form-user">
-      
-          <label for="user-comment" class="order-form-label">
-          </label>
-          <textarea name="user-comment" id="user-comment" placeholder="Comment" class="order-form-user order-comment"></textarea>
-      
+
+        <form class="order-form" name="feedback-form">
+          <div class="field">
+            <input
+              class="order-form-user"
+              type="text"
+              name="user-name"
+              autocomplete="name"
+              id="full-name"
+              pattern="^\s*([A-Za-z ]+) ([A-Za-z]+)$"
+              title="Name Surname"
+              placeholder=""
+              data-placeholder="Mark Roberto"
+              required
+            />
+            <label class="order-form-label" for="full-name">Full Name *</label>
+          </div>
+
+          <div class="field">
+            <input
+              class="order-form-user"
+              type="email"
+              name="user-email"
+              autocomplete="email"
+              id="user-email"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})"
+              title="example@mail.com"
+              placeholder=""
+              data-placeholder="example@mail.com"
+              required
+            />
+            <label class="order-form-label" for="user-email">Email *</label>
+          </div>
+
+          <div class="comment-field">
+            <textarea
+              class="order-comment"
+              name="user-comment"
+              id="user-comment"
+              placeholder=""
+              data-placeholder="Here is my comment"
+            ></textarea>
+            <label class="order-form-label" for="user-comment">Comment</label>
+          </div>
           <button class="order-form-btn">Send</button>
         </form>
       </div>
@@ -37,32 +69,61 @@
         <picture>
           <source
             media="(min-width: 1280px )"
-            srcset="./img/order/order.jpg 1x, ./img/order/order@2x.jpg 2x">
+            srcset="./img/order/order.jpg 1x, ./img/order/order@2x.jpg 2x"
+          />
           <source
             media="(min-width: 768px )"
-            srcset="./img/order/order-tab.jpg 1x, ./img/order/order-tab@2x.jpg 2x">
+            srcset="
+              ./img/order/order-tab.jpg    1x,
+              ./img/order/order-tab@2x.jpg 2x
+            "
+          />
           <source
             media="(maxn-width: 767px )"
-            srcset="./img/order/order-mob.jpg 1x, ./img/order/order-mob@2x.jpg 2x">
-        <img
-        src="./img/order/order-mob.jpg"
-        alt="Fresh"
-        class="order-follow-picture"
-        width="528px">
+            srcset="
+              ./img/order/order-mob.jpg    1x,
+              ./img/order/order-mob@2x.jpg 2x
+            "
+          />
+          <img
+            src="./img/order/order-mob.jpg"
+            alt="Fresh"
+            class="order-follow-picture"
+            width="528"
+          />
         </picture>
         <p class="order-follow-text">Follow us on our social networks:</p>
         <div class="order-follow-box">
           <ul class="order-follow-list">
             <li class="order-list-item">
-              <a href="" class="order-item-link">instagram</a>
+              <a
+                href="https://www.instagram.com/goitclub/"
+                class="order-item-link"
+                target="_blank"
+                >instagram</a
+              >
             </li>
-              <p class="order-lixt-slash">/</p>
             <li>
-              <a href="" class="order-item-link">facebook</a>
+              <p class="order-lixt-slash">/</p>
             </li>
-              <p class="order-lixt-slash">/</p>
             <li>
-              <a href="" class="order-item-link">youtube</a>
+              <a
+                href="https://www.facebook.com/goITclub/ "
+                class="order-item-link"
+                target="_blank"
+                >facebook</a
+              >
+            </li>
+            <li>
+              <p class="order-lixt-slash">/</p>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/c/GoIT"
+                class="order-item-link"
+                target="_blank"
+                >youtube</a
+              >
             </li>
           </ul>
         </div>
